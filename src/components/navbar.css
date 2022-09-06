@@ -1,0 +1,92 @@
+.flex-navbar {
+    background: linear-gradient(#000000, #00000000);
+    padding-top: .5vw;
+    padding-bottom: 3vw;
+    display: flex;
+    justify-content: flex-end;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.flex-nav-item {
+    display: flex;
+    margin-right: 2vw;
+    letter-spacing: -1px;
+    justify-content: right;
+}
+
+/*hover features for links */
+
+#home-link:hover {
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+#web-link:hover {
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+#projects-link:hover {
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+#contact-link:hover {
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+
+/*mobile devices only*/
+
+@media (max-width: 428px) {
+    .flex-navbar {
+        flex-direction: column;
+        align-items: flex-end;
+        
+    }
+    .flex-nav-item {
+        font-size: small;
+        width: 75px;
+    }
+    
+    #dropdown-link {
+        border-bottom-style: solid;
+        border-width: 1px;
+        margin-top: 6px;
+    }
+    #home-link {
+        display: none;
+    }
+    #web-link {
+        display: none;
+    }
+    #contact-link {
+        display: none;
+    }
+    #projects-link {
+        display: none;
+    }
+
+
+    
+}
+
+
+/*only screens wider than smartphones*/
+
+@media (min-width: 429px) {
+    
+    .flex-nav-item {
+        font-size: large;
+        border-bottom-style: solid;
+        border-width: 1px;
+    }
+    #dropdown-link {
+        display: none;
+    }
+    
+    
+}

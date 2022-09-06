@@ -1,0 +1,43 @@
+/* Themify Customize Styling */
+a {	
+	color: #000000; 
+}
+.header-classic #headerwrap, #headerwrap {	
+	background-color: transparent; 
+}
+#headerwrap a {	
+	color: #000000; 
+}
+#headerwrap a:hover {	
+	color: #000000; 
+}
+#pagewrap #headerwrap.fixed-header, .transparent-header #pagewrap #headerwrap.fixed-header {	
+	background-color: transparent;background-image: none; 
+}
+#main-nav-wrap #main-nav a {	
+	background-color: transparent; 
+}
+#main-nav-wrap #main-nav .current_page_item a, #main-nav .current-menu-item a, #main-nav > .current_page_item > a, #main-nav > .current-menu-item > a {	
+	color: #000000; 
+}
+@media screen and (max-width: 680px) { /* Themify Customize Styling */
+a {	
+	color: #000000; 
+}
+.header-classic #headerwrap, #headerwrap {	background: none;
+	background-color: #ffffff;background-image: none; 
+}
+#headerwrap a {	
+	color: #000000; 
+}
+#headerwrap a:hover {	
+	color: #000000; 
+}
+#pagewrap #headerwrap.fixed-header, .transparent-header #pagewrap #headerwrap.fixed-header {	
+	background-color: transparent; 
+}
+#main-nav-wrap #main-nav .current_page_item a, #main-nav .current-menu-item a, #main-nav > .current_page_item > a, #main-nav > .current-menu-item > a {	
+	color: #000000; 
+}
+ }
+/*This file was exported by "Export WP Page to Static HTML" plugin which created by ReCorp (https://myrecorp.com) */

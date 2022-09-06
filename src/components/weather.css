@@ -1,0 +1,39 @@
+
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-container {
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.visible-row {
+    border-style: solid;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+.selection-options {
+    display: none;
+    border-style: solid;
+    text-align: left;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.selection-row {
+    cursor: pointer;
+}
+
+.selection-row:hover {
+    background-color: white;
+    color: black;
+}
+

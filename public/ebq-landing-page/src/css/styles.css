@@ -1,0 +1,16 @@
+/* Styles css CODE goes HERE  */
+/* This css overrides some of the bootstrap defaults */ 
+
+
+#demo_button {
+    font-size: small;
+    border-radius: 25px;
+}
+
+#light_blue_bg {
+    background-color: #ecf4ff;
+}
+
+#dark_blue_bg {
+    background-color: #0b479f;
+}
