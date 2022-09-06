@@ -110,6 +110,23 @@ const Portfolio = (props) => {
                     <div className="flexbox-container" >
                         <div className="flexbox-item flexbox-item1">
                             <div className="site-image">
+                                <img src="media/mybrary-preview.png" alt="mybrary-website" width="100%" />
+                            </div>
+                            <div className="img-caption">
+                                <p>
+                                <strong>Description: </strong>Mybrary is a full-stack library project where I practiced my skills building an app with Node.js, Express, and MongoDB.
+                                </p>
+                                <p>
+                                    <strong>Features:</strong> Fully functional backend server with MongoDB database functionality. You can add/modify/delete authors and books, and search for previously added books/authors with database functions. Preloaded with some of my favorite books. 
+                                </p>
+                                <p>
+                                    <strong>View: </strong><a href="https://mybrary-whiteside.herokuapp.com/" target="_blank">Live</a> or <a href="https://github.com/whiteside-daniel/Mybrary" target="_blank">GitHub Repo</a>
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div className="flexbox-item flexbox-item1">
+                            <div className="site-image">
                                 <img src="media/psat-page.png" alt="psat-website" width="100%" />
                             </div>
                             <div className="img-caption">
