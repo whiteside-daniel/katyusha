@@ -261,7 +261,7 @@ const Portfolio = (props) => {
                             <h4>Daniel Whiteside</h4>
                             <p>Email: whiteside(dot)danielj@gmail.com</p>
                             <p>Phone: 512 7four3 2zero-zero1</p>
-                            <p><a href="media/2022-07-24-Daniel-Whiteside.pdf" target="_blank">Resume</a> - Last updated: July 24, 2022</p>
+                            <p><a href="media/daniel-whiteside-resume.pdf" target="_blank">Resume</a> - Last updated: September 7, 2022</p>
                         </div>
                     </div>
                 </div>
