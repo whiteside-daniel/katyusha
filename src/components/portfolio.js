@@ -125,7 +125,7 @@ const Portfolio = (props) => {
                             </div>
                             
                         </div>
-                        <div className="flexbox-item flexbox-item1">
+                        <div className="flexbox-item flexbox-item2">
                             <div className="site-image">
                                 <img src="media/psat-page.png" alt="psat-website" width="100%" />
                             </div>
@@ -142,7 +142,7 @@ const Portfolio = (props) => {
                             </div>
                             
                         </div>
-                        <div className="flexbox-item flexbox-item2">
+                        <div className="flexbox-item flexbox-item3">
                             <div className="site-image">
                                 <img src="media/danieljwhiteside-site.png" alt="coaching-website" width="100%" />
                             </div>
@@ -159,7 +159,7 @@ const Portfolio = (props) => {
                             </div>
                         </div>
                         
-                        <div className="flexbox-item flexbox-item3">
+                        <div className="flexbox-item flexbox-item4">
                             <div className="site-image">
                                 <img src="media/ebq-landing.png" alt="EBQ-landing-page" width="100%" />
                             </div>
@@ -176,7 +176,7 @@ const Portfolio = (props) => {
                             </div>
                         </div>
                         
-                        <div className="flexbox-item flexbox-item4">
+                        <div className="flexbox-item flexbox-item5">
                             <div className="site-image">
                                 <img src="media/creatrclasses.com-square.png" alt="creatr-classes-landing-page" width="100%" />
                             </div>
@@ -189,6 +189,38 @@ const Portfolio = (props) => {
                                 </p>
                                 <p>
                                     <strong>View: </strong><a href="creatrclasses.com-homepage-html/index.html" target="_blank">Static HTML</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flexbox-item flexbox-item6">
+                            <div className="site-image">
+                                <img src="media/silver-linings-preview.png" alt="silver-linings-site" width="100%" />
+                            </div>
+                            <div className="img-caption">
+                                <p>
+                                <strong>Description: </strong>Built with Google Sites. My input on this projects was primarily related to back-end work and configuring the domain for public access. This client is a retired public school teacher and I helped make this website functional. The site owner created all content. 
+                                </p>
+                                <p>
+                                    <strong>Features:</strong> Automatic publishing when the site is updated by the owners. Easy to access editing tools and beautiful templates.
+                                </p>
+                                <p>
+                                    <strong>View: </strong><a href="https://sites.google.com/view/silverliningacademy/home" target="_blank">Live</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flexbox-item flexbox-item7">
+                            <div className="site-image">
+                                <img src="media/luxury-travel-preview.png" alt="luxury-travel-site" width="100%" />
+                            </div>
+                            <div className="img-caption">
+                                <p>
+                                <strong>Description: </strong> Luxury Travel is a brand created by a local travel consultant/private agent. A basic website including contact information and photo gallery of interesting locations and trips booked for clients. Built with Wix sitebuilder and hosted with GoDaddy.
+                                </p>
+                                <p>
+                                    <strong>Features:</strong> Custom domain configuration and CDN (content delivery network), virtually 100% uptime, and secured using HTTPS. 
+                                </p>
+                                <p>
+                                    <strong>View: </strong><a href="https://www.luxurytravel.one/" target="_blank">Live</a>
                                 </p>
                             </div>
                         </div>
