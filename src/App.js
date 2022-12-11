@@ -24,10 +24,13 @@ function App() {
       <div className="site-credit" id="site-credit">
         <p>© Daniel Whiteside, 2022</p>
         <p>Website built with ReactJS, HTML5, and CSS</p>
-        <p>Site Hosting: DigitalOcean - Ubuntu 22.04 x64 and Apache2</p>
+        <p>Site Hosting: AWS Amplify - CI/CD tool</p>
         <p>
           Additional technologies used: <br />
-          GitHub, AWS Cloud9, Node Package Manager
+          GitHub, AWS Cloud9, NPM
+        </p>
+        <p>
+          Repo for this site's source code is available <a href="https://github.com/whiteside-daniel/katyusha.git">here</a>.
         </p>
       </div>
       

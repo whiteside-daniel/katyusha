@@ -268,8 +268,24 @@ const Portfolio = (props) => {
                         <div className="flexbox-item">
                             <div className="projects-container" id="limacon-python">
                                 <h3>Limaçon</h3>
-                                <img id="limacon-img" src="media/limacon-preview.png" alt="e8-group" width="90%" />
+                                <img id="limacon-img" src="media/limacon-preview.png" alt="limacon" width="90%" />
                                 <p>A limaçon created from the envelope of the reflected rays emanating from a single point. This was inspired by noticing a limaçon is generated when light beams reflect off a circular curved surface (like a coffee cup or ceramic dish).<br /><a href="media/limacon.png" target="_blank">Full Image (png)</a> or <a href="media/limacon.py" target="_blank">Python file</a></p>
+                                
+                            </div>
+                        </div>
+                        <div className="flexbox-item">
+                            <div className="projects-container" id="conscious-shopper">
+                                <h3>Conscious Shopper</h3>
+                                <img id="shopper-img" src="media/shopper.jpg" type="" alt="conscious shopper" width="90%" />
+                                <p>Conscious Shopper - an open source project bringing together cutting-edge analytics and government transparency. Coming soon! </p>
+                                
+                            </div>
+                        </div>
+                        <div className="flexbox-item">
+                            <div className="projects-container" id="youtube-channel">
+                                <h3>My YouTube Channel</h3>
+                                <img id="youtube-img" src="media/youtube.png" type="" alt="conscious shopper" width="90%" />
+                                <p>My YouTube channel has videos I've uploaded over the years, from instructional math videos to philosophical rants and guided meditations. <a href="https://www.youtube.com/channel/UCpDOcOb2HGJhKD-iJj_ShNw" target="_blank" >Link</a></p>
                                 
                             </div>
                         </div>
@@ -292,8 +308,8 @@ const Portfolio = (props) => {
                         <div id="contact-item">
                             <h4>Daniel Whiteside</h4>
                             <p>Email: whiteside(dot)danielj@gmail.com</p>
-                            <p>Phone: 512 7four3 2zero-zero1</p>
-                            <p><a href="media/daniel-whiteside-resume.pdf" target="_blank">Resume</a> - Last updated: September 7, 2022</p>
+                            <p>Phone: 512 7four3 2zero-zero1 (humans, you can figure it out)</p>
+                            <p><a href="media/daniel-whiteside-resume.pdf" target="_blank">Resume</a> - Last updated: October, 2022</p>
                         </div>
                     </div>
                 </div>
