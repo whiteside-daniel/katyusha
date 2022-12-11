@@ -21,7 +21,7 @@ export const TerminalWindow = () => {
                           .pauseFor(100)
                           .typeString('<br>site built with ReactJS, HTML5, CSS')
                           .pauseFor(20)
-                          .typeString('<br>host: digitalOcean - Ubuntu 22.04 x64')
+                          .typeString('<br>host: AWS - Amiplify CI/CD Tool')
                           .pauseFor(1500)
                           .callFunction((elements) => {
                               let portfolio = document.getElementById('homepage-container');
