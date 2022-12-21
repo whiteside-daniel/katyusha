@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './navbar.js';
+import NavBar from './navbar.js';
 
 const ContentModule = (props) => {
 
@@ -8,9 +8,9 @@ const ContentModule = (props) => {
                 <video id="video-background" key='video' autoPlay loop muted playsInline width="100%" >
                   <source src="media/circuit.mp4" />
                 </video>
-                <Navbar page={props.page} setPage={props.setPage} />
+                <NavBar page={props.page} setPage={props.setPage} />
                 <div className="headshot-container">
-                    <div className="headshot" style={{ backgroundImage: "url(media/headshot.jpg) " }}>
+                    <div className="headshot" style={{ backgroundImage: "url(media/headshot.jpg)" }}>
                     </div>
                     <div className="headshot-caption">
                         <span>&#60;Daniel Whiteside&#62;<br />

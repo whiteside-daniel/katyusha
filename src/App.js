@@ -17,7 +17,7 @@ function App() {
       
       <div className="outer-portfolio-container">
         <div id="inner-portfolio-container">
-          <Portfolio page={page} />
+          <Portfolio page={page} setPage={setPage} />
         </div>
       </div>
       

@@ -17,14 +17,8 @@ const Portfolio = (props) => {
                     <div className="home-slide" id="language-slide">
                         <div className="slide-caption">
                             <p>
-                                Daniel designs and builds beautiful websites - from scratch, from templates, and everything in between.
-                                Daniel is currently the owner and lead director for Creatr Classes - a small association of teachers dedicated to providing STEM education to students of all ages.
-                            </p><br />
-                            <p>
-                                Daniel got started with technology at a young age. At 11 years old he read "Teach Yourself C in 21 days." While it may have taken slightly longer than 21 days, he eventually got a C compiler and linker up and running and wrote his first program on an old Hewlett Packard PC tower.
-                            </p><br />
-                            <p>
-                                Since then, Daniel has received a broad education in many technological fields: he has studied Java, Python, C++, Basic, HTML, CSS, JavaScript, computer repair, and robotics. In addition, Daniel loves mathamtics, physics, carpentry, music, and psychology. 
+                                Daniel Whiteside is a software engineer, math educator, and meditation teacher. Daniel is currently the lead developer for ConsciousShopper where he oversees the technical development of the core product, data analytics, and website design. 
+                                Daniel is also the owner and director for Creatr Classes - a small association of teachers dedicated to providing STEM education to students of all ages.
                             </p><br />
                         </div>
                     </div>
@@ -35,13 +29,21 @@ const Portfolio = (props) => {
                         </div>
                         <div className="slide-caption">
                             <p>
-                                Daniel has built dozens of sites and provided maintence and assistance for small businesses, creative professionals, friends, and family.
+                                Daniel has built dozens of sites/full-stack apps and provided web maintence/assistance for small businesses, creative professionals, friends, and family.
                             </p><br />
                             <p>
-                                Daniel has designed, built and maintained web resources that provide real value to customers, including paid membership sites, online course platforms, subscription sites, and producing digital content for unified marketing approaches.
+                                Daniel has designed, built and maintained web resources that provide real value to customers like:
                             </p><br />
+                            <ul>
+                                <li>ConsciousShopper</li>
+                                <li>Jung Society of Austin</li>
+                                <li>Silver Linings Online Academy</li>
+                                <li>Melinda Rothouse, PhD.</li>
+                                <li>Cruise Holidays Northwest Austin</li>
+                                <li>The Imaginary Friends</li>
+                            </ul>
                             <p>
-                                Daniel's favorite development framework is React, and he relies heavily on JavaScript. Everything on this site was made with React.
+                                Daniel's favorite development framework is React, and he relies heavily on JavaScript. This website was built with React with scratch-made components.
                             </p>
                         </div>
                     </div>
@@ -56,7 +58,11 @@ const Portfolio = (props) => {
                                 Daniel spends a lot of time learning technical skills and enjoys studying web design and pure mathematics. From online courses and single-page websites to modeling 8-dimensional objects with python - Daniel likes to code it all!
                             </p>
                             <p>
-                                You can see some of his most recent web projects on the 'Web' tab. 
+                                You can see some of his most recent web projects on the 
+                                <span 
+                                    onClick={() => {props.setPage('projects')}}
+                                    style={{'text-decoration': 'underline', 'cursor': 'pointer'}}
+                                    >'Projects'</span> tab. 
                             </p>
                         </div>
                     </div>
