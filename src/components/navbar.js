@@ -26,6 +26,7 @@ function NavBar(props) {
                     <div className="nav-item" onClick={() => {handleClick('websites')}}>Websites</div>
                     <div className="nav-item" onClick={() => {handleClick('projects')}}>Projects</div>
                     <div className="nav-item" onClick={() => {handleClick('contact')}}>Contact</div>
+                    <div className="nav-item" onClick={() => {handleClick('blog')}}>Blog</div>
                 </div>
             </div>
         </div>

@@ -320,6 +320,19 @@ const Portfolio = (props) => {
                     </div>
                 </div>
             );
+            case 'blog':
+                return(
+                    <div id="portfolio-element"> 
+                        <div className="flexbox-container" >
+                            <div className="flexbox-title">
+                                <h3 align="center">Blog</h3>
+                            </div>
+                        </div>
+                        <div className="flexbox-container" >
+                            
+                        </div>
+                    </div>
+                );
         default: return(<div>No content loaded yet. Try refreshing the page.</div>);
     }
 }
