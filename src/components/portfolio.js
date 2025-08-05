@@ -17,9 +17,11 @@ const Portfolio = (props) => {
                     <div className="home-slide" id="language-slide">
                         <div className="slide-caption">
                             <p>
-                                Daniel Whiteside is a software engineer, math educator, and meditation teacher. Daniel is currently the lead developer for ConsciousShopper where he oversees the technical development of the core product, data analytics, and website design. 
-                                Daniel is also the owner and director for Creatr Classes - a small association of teachers dedicated to providing STEM education to students of all ages.
-                            </p><br />
+                                Daniel Whiteside is a software engineer, project manager, and solutions architect with a unique blend of technical expertise and human-centered leadership skills. Currently serving as Developer/Project Manager at BRKTHRU, Daniel integrates cutting-edge AI technology and facilitates custom software implementations across Microsoft, Zoho, and other enterprise ecosystems.
+                            </p>
+                            <p>
+                            Daniel brings a distinctive combination of technical depth and interpersonal intelligence to his work. His background spans full-stack development, data analytics, project management, and team leadership, supported by certifications including Certified Scrum Master (CSM), CompTIA Data+, and Associate Project Manager (CAPM).
+                            <br /></p>
                         </div>
                     </div>
                     
@@ -29,40 +31,17 @@ const Portfolio = (props) => {
                         </div>
                         <div className="slide-caption">
                             <p>
-                                Daniel has built dozens of sites/full-stack apps and provided web maintence/assistance for small businesses, creative professionals, friends, and family.
-                            </p><br />
-                            <p>
-                                Daniel has designed, built and maintained web resources that provide real value to customers like:
+                                Throughout his career, Daniel has architected and delivered solutions for organizations ranging from startups to enterprise clients, with particular expertise in:
                             </p><br />
                             <ul>
-                                <li>ConsciousShopper</li>
-                                <li>Jung Society of Austin</li>
-                                <li>Silver Linings Online Academy</li>
-                                <li>Melinda Rothouse, PhD.</li>
-                                <li>Cruise Holidays Northwest Austin</li>
-                                <li>The Imaginary Friends</li>
+                                <li>CRM and business application integration</li>
+                                <li>Data analytics and reporting systems</li>
+                                <li>AI/ML implementation and strategy</li>
+                                <li>Agile project management and team facilitation</li>
+                                <li>Full-stack web development (JavaScript, Python, React)</li>
                             </ul>
                             <p>
-                                Daniel's favorite development framework is React, and he relies heavily on JavaScript. This website was built with React with scratch-made components.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    
-                    <div className="home-slide" id="hard-skills-slide">
-                        <div className='slide-img'>
-                            <img src='media/slide-hard-skills.png' width="100%" />
-                        </div>
-                        <div className="slide-caption">
-                            <p>
-                                Daniel spends a lot of time learning technical skills and enjoys studying web design and pure mathematics. From online courses and single-page websites to modeling 8-dimensional objects with python - Daniel likes to code it all!
-                            </p>
-                            <p>
-                                You can see some of his most recent web projects on the 
-                                <span 
-                                    onClick={() => {props.setPage('projects')}}
-                                    style={{'text-decoration': 'underline', 'cursor': 'pointer'}}
-                                    >'Projects'</span> tab. 
+                                His technical toolkit includes JavaScript/Node.js, Python, SQL, AWS, REST APIs, and extensive experience with the Zoho ecosystem. During his tenure as Project Lead/Solutions Engineer at Zoho, Daniel became a recognized subject matter expert, speaking at tech events and delivering enterprise solutions for high-value customers.
                             </p>
                         </div>
                     </div>
@@ -74,7 +53,7 @@ const Portfolio = (props) => {
                         </div>
                         <div className="slide-caption">
                             <p>
-                                In 2011 Daniel took a hiatus from his technical education to take a dive into his own personal growth and spiritual development. He's spent over a decade learning and practiciing mindfulness, Zen and Tibetan meditation, yoga, spent hundreds of hours in therapy and coaching, and taken surveys of psychological literature related to attachment theory, cognitive development, and personal wellbeing. 
+                                Daniel's approach to technology is informed by over 500 hours of training in psychology, communication, and leadership. This unique foundation enables him to bridge technical and human elements effectively, fostering collaboration and delivering solutions that truly serve end users.
                             </p>
                             
                             <div id="quote">
@@ -82,13 +61,13 @@ const Portfolio = (props) => {
                                 A Note from Daniel:
                                 </p>
                                 <p>
-                                    "Taking a break from my technical education to work on myself was the best decision I ever made, and completely changed the trajectory of my life. It was impossible to see at the time how it would make sense, but looking backwards I can see how the pieces of my life fit together. 
+                                    Early in my career, I recognized that technical excellence alone wasn't sufficient for creating meaningful impact. I invested significant time studying human psychology, communication, and systems thinking – disciplines that now inform every aspect of my work.
                                 </p>
                                 <p>
-                                    Science and technology are incredibly powerful tools inspired by, guided, and directed by the aims of the people who use them. If we have learned anything from the last 100 years of history, it’s this - intelligence is not the same as wisdom: we have discovered that we are sufficiently intelligent to destroy ourselves, but it is yet to be seen if we are wise enough not to do it. 
+                                    This foundation has proven invaluable in leadership roles, whether facilitating cross-functional teams, translating complex technical concepts for stakeholders, or designing user-centered solutions. I've learned that the most powerful technology emerges when technical capability is guided by deep understanding of human needs and organizational dynamics.
                                 </p>
                                 <p>
-                                    In retrospect it’s clear to me that I left the university to look for wisdom. Now that I have connected with various wisdom traditions, I am able to show up more fully in my technical roles and contribute to society in a healthy, sustainable way."
+                                    Today, I bring both technical rigor and human insight to every project, helping teams and organizations leverage technology in ways that are both innovative and sustainable."
                                 </p>
                             </div>
                         </div>
@@ -114,23 +93,7 @@ const Portfolio = (props) => {
                         </div>
                     </div>
                     <div className="flexbox-container" >
-                        <div className="flexbox-item flexbox-item1">
-                            <div className="site-image">
-                                <img src="media/mybrary-preview.png" alt="mybrary-website" width="100%" />
-                            </div>
-                            <div className="img-caption">
-                                <p>
-                                <strong>Description: </strong>Mybrary is a full-stack library project where I practiced my skills building an app with Node.js, Express, and MongoDB.
-                                </p>
-                                <p>
-                                    <strong>Features:</strong> Fully functional backend server with MongoDB database functionality. You can add/modify/delete authors and books, and search for previously added books/authors with database functions. Preloaded with some of my favorite books. 
-                                </p>
-                                <p>
-                                    <strong>View: </strong><a href="https://mybrary-whiteside.herokuapp.com/" target="_blank">Live</a> or <a href="https://github.com/whiteside-daniel/Mybrary" target="_blank">GitHub Repo</a>
-                                </p>
-                            </div>
-                            
-                        </div>
+                        
                         <div className="flexbox-item flexbox-item2">
                             <div className="site-image">
                                 <img src="media/psat-page.png" alt="psat-website" width="100%" />
@@ -150,17 +113,17 @@ const Portfolio = (props) => {
                         </div>
                         <div className="flexbox-item flexbox-item3">
                             <div className="site-image">
-                                <img src="media/danieljwhiteside-site.png" alt="coaching-website" width="100%" />
+                                <img src="media/jsa-austin.png" alt="jsa-nonprofit-website" width="100%" />
                             </div>
                             <div className="img-caption">
                                 <p>
-                                <strong>Description: </strong>Wordpress website for coaching and mindfulness classes. Students could view weekly schedule, find course information, read helpful articles, and book appointments using Squarespace scheduling app.
+                                <strong>Description: </strong>Wordpress website for Jung Society of Austin 501c(3). A website dedicated to posting event updates, helpful resources, and managing member donations.
                                 </p>
                                 <p>
-                                    <strong>Features:</strong> Blog with original content, mobile responsive design, beautiful modern look with scrolling animations.
+                                    <strong>Features:</strong> Mobile responsive design, member login portal and management, beautiful modern look.
                                 </p>
                                 <p>
-                                    <strong>View: </strong><a href="daniel-j-whiteside/index.html" target="_blank">Static HTML</a>
+                                    <strong>View: </strong><a href="https://jungsociety.org" target="_blank">Live</a>
                                 </p>
                             </div>
                         </div>
@@ -315,7 +278,7 @@ const Portfolio = (props) => {
                             <h4>Daniel Whiteside</h4>
                             <p>Email: whiteside(dot)danielj@gmail.com</p>
                             <p>Phone: 512 7four3 2zero-zero1 (humans, you can figure it out)</p>
-                            <p><a href="media/daniel-whiteside-resume.pdf" target="_blank">Resume</a> - Last updated: October, 2022</p>
+                            <p><a href="media/daniel-whiteside-resume.pdf" target="_blank">Resume</a> - Last updated: August 2025</p>
                         </div>
                     </div>
                 </div>
