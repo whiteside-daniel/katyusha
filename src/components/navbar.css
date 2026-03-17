@@ -37,3 +37,7 @@
 .nav-item:hover {
     font-weight: bolder;
 }
+.nav-item a {
+    color: inherit;
+    text-decoration: none;
+}

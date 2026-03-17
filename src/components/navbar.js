@@ -23,10 +23,8 @@ function NavBar(props) {
                 </div>
                 <div className="nav-links" style={{display: (menu ? 'block' : 'none')}}>
                     <div className="nav-item" onClick={() => {handleClick('home')}}>Home</div>
-                    <div className="nav-item" onClick={() => {handleClick('websites')}}>Websites</div>
-                    <div className="nav-item" onClick={() => {handleClick('projects')}}>Projects</div>
-                    <div className="nav-item" onClick={() => {handleClick('contact')}}>Contact</div>
-                    <div className="nav-item" onClick={() => {handleClick('blog')}}>Blog</div>
+<div className="nav-item" onClick={() => {handleClick('projects')}}>Projects</div>
+                    <div className="nav-item"><a href="https://creatrcollective.substack.com" target="_blank" rel="noreferrer">Substack</a></div>
                 </div>
             </div>
         </div>
