@@ -134,6 +134,12 @@ const Portfolio = (props) => {
                         </div>
                         <div className="flexbox-item">
                             <div className="projects-container">
+                                <h3>Retirement Calculator</h3>
+                                <p>An interactive retirement savings calculator. Enter your current savings, contributions, and expected returns to project growth and see how long your nest egg will last. Built with Chart.js and MathJax. <a href="retirement-calculator/index.html" target="_blank">Open Calculator</a></p>
+                            </div>
+                        </div>
+                        <div className="flexbox-item">
+                            <div className="projects-container">
                                 <h3>Play Pong</h3>
                                 <img src="media/pong-img.png" alt="pong-screenshot" width="90%" />
                                 <p>A simple recreation of classic Pong. Desktop only — not mobile friendly. <a href="pong/pong.html" target="_blank">Play Pong</a></p>

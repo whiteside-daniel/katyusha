@@ -1,0 +1,94 @@
+body {
+  background: #f0f2f5;
+}
+
+#resultBox {
+  background: #1e293b;
+  transition: background 0.3s ease;
+}
+
+#resultMain {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.result-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.table-scroll {
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.year-table thead th {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  border-bottom: 2px solid #dee2e6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.6rem 1rem;
+  white-space: nowrap;
+}
+
+.year-table td {
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.row-pre  { background: rgba(13, 110, 253, 0.04); }
+.row-post { background: rgba(220, 53, 69, 0.04); }
+
+.badge-phase {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2em 0.55em;
+  border-radius: 4px;
+}
+
+.badge-pre  { background: rgba(13, 110, 253, 0.12); color: #0a58ca; }
+.badge-post { background: rgba(220, 53, 69, 0.12);  color: #b02a37; }
+
+.formula-toggle {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6c757d;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background: #fff;
+  user-select: none;
+  list-style: none;
+}
+
+.formula-toggle::-webkit-details-marker { display: none; }
+
+.formula-toggle::before {
+  content: '▸ ';
+  font-size: 0.75rem;
+}
+
+details[open] .formula-toggle::before {
+  content: '▾ ';
+}
+
+.formula-section h6 {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.formula-block {
+  background: #f8f9fa;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+}
