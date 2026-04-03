@@ -1,0 +1,35 @@
+# Daniel Whiteside
+
+Software Engineer & Independent Consultant based in the United States.
+
+## About
+
+Daniel Whiteside is a software engineer, project manager, and solutions architect. He works as an independent consultant and is the founder of Wharfinger, an asset management application. His background spans full-stack development, data analytics, AI integration, and enterprise software.
+
+He is a former Project Lead and Solutions Engineer at Zoho, where he delivered enterprise solutions for high-value clients and spoke at technology events.
+
+## Skills & Expertise
+
+- **Zoho**: Zoho CRM, Zoho ecosystem development, enterprise Zoho implementations
+- **Development**: JavaScript, Node.js, Python, SQL, REST APIs, React, HTML/CSS
+- **Cloud & Infrastructure**: AWS, DigitalOcean
+- **AI/ML**: AI integration, ML strategy and implementation
+- **Leadership**: Team facilitation, stakeholder engagement, 500+ hours of training in psychology, communication, and leadership
+- **Project Management**: Agile, Scrum, solutions architecture
+
+## Certifications
+
+- Certified ScrumMaster (CSM)
+- CompTIA Data+
+- CAPM (Certified Associate in Project Management)
+
+## Projects
+
+- **Wharfinger** — Asset management application (staging.wharfinger.app)
+
+## Links
+
+- Resume: danielwhiteside.dev/media/daniel-whiteside-resume.pdf
+- GitHub: github.com/whiteside-daniel
+- Substack: creatrcollective.substack.com
+- Email: daniel@creatrcollective.net

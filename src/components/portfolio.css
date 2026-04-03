@@ -47,6 +47,16 @@
     display: none;
 }
 
+#cc-notice {
+    margin: 2vh 6vw 3vh;
+    padding-top: 1.5vh;
+    border-top: 1px solid var(--shadow-color);
+    text-align: center;
+    font-size: smaller;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+}
+
 #contact-item {
     width: 600px;
     margin: 4vw;

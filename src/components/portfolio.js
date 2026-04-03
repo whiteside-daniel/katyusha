@@ -56,11 +56,17 @@ const Portfolio = (props) => {
 
                     <div id="home-contact">
                         <p>Get in touch</p>
-                        <p>daniel@creatrcollective.net &nbsp;·&nbsp; 512 7four3 2zero-zero1</p>
+                        <p>daniel@creatrcollective.net</p>
                         <p>
                             <a href="media/daniel-whiteside-resume.pdf" target="_blank">Resume</a>
                             &nbsp;·&nbsp;
                             <a href="https://creatrcollective.substack.com" target="_blank" rel="noreferrer">Substack</a>
+                        </p>
+                    </div>
+                    <div id="cc-notice">
+                        <p>
+                            Anti-copyright notice: steal this. Use it. Make money from it. I don't care — just tell people where it came from.{' '}
+                            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>
                         </p>
                     </div>
                 </div>
@@ -81,7 +87,7 @@ const Portfolio = (props) => {
                                     <p>Password: password123</p>
                                 </code>
                                 <div id="demo-modal-buttons">
-                                    <a href="https://staging.wharfinger.app" target="_blank" rel="noreferrer" onClick={() => setShowDemoModal(false)}>Go to Wharfinger →</a>
+                                    <a href="https://staging.wharfinger.app/login" target="_blank" rel="noreferrer" onClick={() => setShowDemoModal(false)}>Go to Wharfinger →</a>
                                     <button onClick={() => setShowDemoModal(false)}>Cancel</button>
                                 </div>
                             </div>
@@ -110,7 +116,24 @@ const Portfolio = (props) => {
                         </div>
                     </div>
 
+                        
                     <div className="flexbox-container">
+                        <div className="flexbox-item">
+                            <div className="projects-container">
+                                <h3>Polity Phase Map</h3>
+                                <img id="polity-graph-img" src="media/polity-map.png" alt="polity-graph" width="90%" />
+                                <p>
+                                    Polity Phase Graph is an interactive political analysis framework built as a standalone JavaScript application. Moving beyond linear "cycle of democracy" models like Tytler's, it maps political development as a directed graph of ten states. <a href="political-map/polity-phase-map.html" target="_blank">Open Polity Phase Map</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flexbox-item">
+                            <div className="projects-container">
+                                <h3>Retirement Calculator</h3>
+                                <img id="retirement-img" src="media/retirement-calc.png" alt="retirement" width="90%" />
+                                <p>An interactive retirement savings calculator. Enter your current savings, contributions, and expected returns to project growth and see how long your nest egg will last. Built with Chart.js and MathJax. <a href="retirement-calculator/index.html" target="_blank">Open Calculator</a></p>
+                            </div>
+                        </div>
                         <div className="flexbox-item">
                             <div className="projects-container" id="e8-animation">
                                 <h3>E8 Group Animation</h3>
@@ -134,12 +157,6 @@ const Portfolio = (props) => {
                         </div>
                         <div className="flexbox-item">
                             <div className="projects-container">
-                                <h3>Retirement Calculator</h3>
-                                <p>An interactive retirement savings calculator. Enter your current savings, contributions, and expected returns to project growth and see how long your nest egg will last. Built with Chart.js and MathJax. <a href="retirement-calculator/index.html" target="_blank">Open Calculator</a></p>
-                            </div>
-                        </div>
-                        <div className="flexbox-item">
-                            <div className="projects-container">
                                 <h3>Play Pong</h3>
                                 <img src="media/pong-img.png" alt="pong-screenshot" width="90%" />
                                 <p>A simple recreation of classic Pong. Desktop only — not mobile friendly. <a href="pong/pong.html" target="_blank">Play Pong</a></p>
@@ -147,6 +164,12 @@ const Portfolio = (props) => {
                         </div>
                     </div>
 
+                    <div id="cc-notice">
+                        <p>
+                            Anti-copyright notice: steal this. Use it. Make money from it. I don't care — just tell people where it came from.{' '}
+                            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>
+                        </p>
+                    </div>
                 </div>
             );
         default: return(<div>No content loaded yet. Try refreshing the page.</div>);

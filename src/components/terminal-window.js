@@ -27,8 +27,6 @@ export const TerminalWindow = () => {
                           .typeString(' 100%')
                           .pauseFor(100)
                           .typeString('<br>site built with ReactJS, HTML5, CSS')
-                          .pauseFor(20)
-                          .typeString('<br>host: AWS - Amplify CI/CD Tool')
                           .pauseFor(1500)
                           .callFunction(revealSite)
                           .start();
