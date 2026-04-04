@@ -14,43 +14,17 @@ const Portfolio = (props) => {
                 <div className="home-container" id="homepage-container">
                     <div className="home-slide">
                         <div className="slide-caption">
-                            <p>
-                                Daniel Whiteside is a software engineer, project manager, and solutions architect. He currently works as an independent consultant and is building Wharfinger, an asset management application.
-                            </p>
-                            <p>
-                                His background spans full-stack development, data analytics, AI integration, and enterprise software — with certifications in Scrum (CSM), data (CompTIA Data+), and project management (CAPM).
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="home-slide">
-                        <div className="slide-caption">
-                            <p>Areas of focus:</p>
-                            <ul>
-                                <li>Zoho CRM and business application development</li>
-                                <li>Inventory and asset management systems</li>
-                                <li>AI/ML implementation and strategy</li>
-                                <li>Agile project management and team facilitation</li>
-                            </ul>
-                            <p>
-                                Technical toolkit: JavaScript/Node.js, Python, SQL, AWS, REST APIs, Zoho ecosystem. Former Project Lead/Solutions Engineer at Zoho — spoke at tech events, delivered enterprise solutions for high-value clients.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="home-slide">
-                        <div className="slide-caption">
-                            <p>
-                                Daniel's approach to technology is grounded in over 500 hours of training in psychology, communication, and leadership — a foundation that shapes how he leads teams, engages stakeholders, and designs solutions that actually get used.
-                            </p>
                             <div id="quote">
-                                <p>
-                                    Early in my career I recognized that technical excellence alone wasn't enough. I invested heavily in understanding human psychology, communication, and systems thinking — and those disciplines now inform everything I build and every team I work with.
-                                </p>
                                 <p>
                                     The most durable technology emerges when technical capability is guided by a genuine understanding of human needs.
                                 </p>
                             </div>
+                            <p>
+                                Early in my career I became curious not only about how the world works, but how people work. I invested heavily in understanding human psychology, communication, and systems thinking — and those disciplines now inform everything I build and every team I work with.
+                            </p>
+                            <p>
+                                I work with businesses and entrepreneurs on software, systems, and the human side of getting things built.
+                            </p>
                         </div>
                     </div>
 
