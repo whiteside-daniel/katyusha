@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './portfolio.css';
-import WeatherModule from './weather.js';
 
 const Portfolio = (props) => {
 
@@ -70,7 +69,7 @@ const Portfolio = (props) => {
 
                     <div className="flexbox-container">
                         <div className="flexbox-title">
-                            <h3 align="center">Projects</h3>
+                            <h3 align="center">Products</h3>
                         </div>
                     </div>
 
@@ -90,14 +89,19 @@ const Portfolio = (props) => {
                         </div>
                     </div>
 
-                        
+                    <div className="flexbox-container">
+                        <div className="flexbox-title">
+                            <h3 align="center">Experiments</h3>
+                        </div>
+                    </div>
+
                     <div className="flexbox-container">
                         <div className="flexbox-item">
                             <div className="projects-container">
                                 <h3>Polity Phase Map</h3>
                                 <img id="polity-graph-img" src="media/polity-map.png" alt="polity-graph" width="90%" />
                                 <p>
-                                    Polity Phase Graph is an interactive political analysis framework built as a standalone JavaScript application. Moving beyond linear "cycle of democracy" models like Tytler's, it maps political development as a directed graph of ten states. <a href="political-map/polity-phase-map.html" target="_blank">Open Polity Phase Map</a>
+                                    An interactive political analysis framework built as a standalone JavaScript application. Moving beyond linear "cycle of democracy" models like Tytler's, it maps political development as a directed graph of ten states. <a href="political-map/polity-phase-map.html" target="_blank">Open Polity Phase Map</a>
                                 </p>
                             </div>
                         </div>
@@ -120,20 +124,6 @@ const Portfolio = (props) => {
                                 <h3>Limaçon</h3>
                                 <img id="limacon-img" src="media/limacon-preview.png" alt="limacon" width="90%" />
                                 <p>A limaçon created from the envelope of the reflected rays emanating from a single point. Inspired by noticing a limaçon is generated when light reflects off a circular curved surface (like a coffee cup).<br /><a href="media/limacon.png" target="_blank">Full Image (png)</a> or <a href="media/limacon.py" target="_blank">Python file</a></p>
-                            </div>
-                        </div>
-                        <div className="flexbox-item">
-                            <div className="projects-container">
-                                <h3>Simple Weather</h3>
-                                <p>A simple weather app. Check the weather in some of my favorite cities. Built with OpenWeather API.</p>
-                                <WeatherModule />
-                            </div>
-                        </div>
-                        <div className="flexbox-item">
-                            <div className="projects-container">
-                                <h3>Play Pong</h3>
-                                <img src="media/pong-img.png" alt="pong-screenshot" width="90%" />
-                                <p>A simple recreation of classic Pong. Desktop only — not mobile friendly. <a href="pong/pong.html" target="_blank">Play Pong</a></p>
                             </div>
                         </div>
                     </div>
