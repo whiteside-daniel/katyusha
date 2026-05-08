@@ -34,5 +34,14 @@
         "file": "OwnFeed_Business_Plan.pdf",
         "feasibility": 8,
         "profitability": 2
+    },
+    {
+        "id": "scratch-that",
+        "title": "Scratch That",
+        "industry": "Education",
+        "description": "Scratch That is an after-school code club for elementary and middle school students, built around MIT's Scratch platform. Eight-week courses run inside existing tutoring centers (Mathnasium, Kumon, etc.) — they provide the space and existing student pipeline; we provide the curriculum and teachers. Deliberately small and local: meaningful work, fair pay for teachers, and kids learning something cool — not a startup chasing scale.",
+        "file": "scratch_that.pdf",
+        "feasibility": 9,
+        "profitability": 2
     }
 ]
