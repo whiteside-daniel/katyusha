@@ -24,6 +24,7 @@ function NavBar(props) {
                 <div className="nav-links" style={{display: (menu ? 'block' : 'none')}}>
                     <div className="nav-item" onClick={() => {handleClick('home')}}>Home</div>
 <div className="nav-item" onClick={() => {handleClick('projects')}}>Projects</div>
+                    <div className="nav-item" onClick={() => {handleClick('business-ideas')}}>Business Ideas</div>
                     <div className="nav-item"><a href="https://creatrcollective.substack.com" target="_blank" rel="noreferrer">Substack</a></div>
                 </div>
             </div>

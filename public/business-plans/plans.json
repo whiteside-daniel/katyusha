@@ -1,0 +1,38 @@
+[
+    {
+        "id": "internet2",
+        "title": "NET2",
+        "industry": "Web Infrastructure",
+        "description": "The current internet was designed for resilience and captured by economics. Every major decentralized network of the last two decades — peer-to-peer file sharing, early crypto, federated social — either died, got re-centralized, or got gamed into uselessness. Not because the technology failed. Because the incentives failed.",
+        "file": "internet2_pitch.pdf",
+        "feasibility": 5,
+        "profitability": 6
+    },
+    {
+        "id": "lunar-watch",
+        "title": "CislunarWatch",
+        "industry": "Space",
+        "description": "CislunarWatch is a space situational awareness (SSA) analytics company focused exclusively on the cislunar domain — the volume of space between Earth and the Moon, including lunar orbit. We aggregate publicly available and licensed tracking data, apply advanced orbital mechanics modeling, and deliver actionable intelligence products to satellite operators, government agencies, launch providers, insurance underwriters, and the growing community of lunar mission operators.",
+        "file": "CislunarWatch_Business_Plan_v2.pdf",
+        "feasibility": 9,
+        "profitability": 8
+    },
+    {
+        "id": "lunarmark",
+        "title": "Lunar Mark",
+        "industry": "Space",
+        "description": "LunarMark is a lunar surface prospecting and data services company. The company deploys robotic assets to permanently shadowed regions (PSRs) of the lunar south pole to collect high-resolution ground-truth data on water ice concentration, regolith composition, thermal gradients, and topography — then delivers that data as a service to NASA, national space agencies, and the emerging commercial lunar sector.",
+        "file": "LunarMark_Business_Plan_v2.pdf",
+        "feasibility": 4,
+        "profitability": 9.5
+    },
+    {
+        "id": "ownfeed",
+        "title": "OwnFeed",
+        "industry": "Open Source Application",
+        "description": "OwnFeed is an open-source, AI-powered personal content curation tool that puts algorithmic control back in the hands of individuals. Instead of having their information diet shaped by engagement-maximizing platforms, users define their own curation logic in plain language — and the AI surfaces content accordingly from RSS, newsletters, podcasts, YouTube, Reddit, and the broader open web.",
+        "file": "OwnFeed_Business_Plan.pdf",
+        "feasibility": 8,
+        "profitability": 2
+    }
+]

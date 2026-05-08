@@ -36,7 +36,6 @@ hr {
     margin: auto;
     display: flex;
     justify-content: center;
-    display: none;
     box-shadow: 0 0 12px 5px var(--second-background) inset;
 }
 
@@ -152,6 +151,4 @@ hr {
     margin-left: 2vw;
     margin-right: 2vw;
     margin-top: 2vh;
-    /*display changed to visible in terminal-window.js*/
-    display: none;
 }

@@ -1,10 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
+import { Chart, ScatterController, LinearScale, PointElement, Tooltip } from 'chart.js';
 import './portfolio.css';
-import WeatherModule from './weather.js';
+
+Chart.register(ScatterController, LinearScale, PointElement, Tooltip);
 
 const Portfolio = (props) => {
 
     const [showDemoModal, setShowDemoModal] = useState(false);
+    const [plans, setPlans] = useState([]);
+
+    useEffect(() => {
+        fetch('/business-plans/plans.json')
+            .then(r => r.json())
+            .then(setPlans)
+            .catch(() => {});
+    }, []);
 
     switch(props.page) {
         
@@ -14,43 +24,17 @@ const Portfolio = (props) => {
                 <div className="home-container" id="homepage-container">
                     <div className="home-slide">
                         <div className="slide-caption">
-                            <p>
-                                Daniel Whiteside is a software engineer, project manager, and solutions architect. He currently works as an independent consultant and is building Wharfinger, an asset management application.
-                            </p>
-                            <p>
-                                His background spans full-stack development, data analytics, AI integration, and enterprise software — with certifications in Scrum (CSM), data (CompTIA Data+), and project management (CAPM).
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="home-slide">
-                        <div className="slide-caption">
-                            <p>Areas of focus:</p>
-                            <ul>
-                                <li>Zoho CRM and business application development</li>
-                                <li>Inventory and asset management systems</li>
-                                <li>AI/ML implementation and strategy</li>
-                                <li>Agile project management and team facilitation</li>
-                            </ul>
-                            <p>
-                                Technical toolkit: JavaScript/Node.js, Python, SQL, AWS, REST APIs, Zoho ecosystem. Former Project Lead/Solutions Engineer at Zoho — spoke at tech events, delivered enterprise solutions for high-value clients.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="home-slide">
-                        <div className="slide-caption">
-                            <p>
-                                Daniel's approach to technology is grounded in over 500 hours of training in psychology, communication, and leadership — a foundation that shapes how he leads teams, engages stakeholders, and designs solutions that actually get used.
-                            </p>
                             <div id="quote">
-                                <p>
-                                    Early in my career I recognized that technical excellence alone wasn't enough. I invested heavily in understanding human psychology, communication, and systems thinking — and those disciplines now inform everything I build and every team I work with.
-                                </p>
                                 <p>
                                     The most durable technology emerges when technical capability is guided by a genuine understanding of human needs.
                                 </p>
                             </div>
+                            <p>
+                                Early in my career I became curious not only about how the world works, but how people work. I invested heavily in understanding human psychology, communication, and systems thinking — and those disciplines now inform everything I build and every team I work with.
+                            </p>
+                            <p>
+                                I work with businesses and entrepreneurs on software, systems, and the human side of getting things built.
+                            </p>
                         </div>
                     </div>
 
@@ -96,7 +80,7 @@ const Portfolio = (props) => {
 
                     <div className="flexbox-container">
                         <div className="flexbox-title">
-                            <h3 align="center">Projects</h3>
+                            <h3 align="center">Products</h3>
                         </div>
                     </div>
 
@@ -116,14 +100,19 @@ const Portfolio = (props) => {
                         </div>
                     </div>
 
-                        
+                    <div className="flexbox-container">
+                        <div className="flexbox-title">
+                            <h3 align="center">Experiments</h3>
+                        </div>
+                    </div>
+
                     <div className="flexbox-container">
                         <div className="flexbox-item">
                             <div className="projects-container">
                                 <h3>Polity Phase Map</h3>
                                 <img id="polity-graph-img" src="media/polity-map.png" alt="polity-graph" width="90%" />
                                 <p>
-                                    Polity Phase Graph is an interactive political analysis framework built as a standalone JavaScript application. Moving beyond linear "cycle of democracy" models like Tytler's, it maps political development as a directed graph of ten states. <a href="political-map/polity-phase-map.html" target="_blank">Open Polity Phase Map</a>
+                                    An interactive political analysis framework built as a standalone JavaScript application. Moving beyond linear "cycle of democracy" models like Tytler's, it maps political development as a directed graph of ten states. <a href="political-map/polity-phase-map.html" target="_blank">Open Polity Phase Map</a>
                                 </p>
                             </div>
                         </div>
@@ -148,20 +137,6 @@ const Portfolio = (props) => {
                                 <p>A limaçon created from the envelope of the reflected rays emanating from a single point. Inspired by noticing a limaçon is generated when light reflects off a circular curved surface (like a coffee cup).<br /><a href="media/limacon.png" target="_blank">Full Image (png)</a> or <a href="media/limacon.py" target="_blank">Python file</a></p>
                             </div>
                         </div>
-                        <div className="flexbox-item">
-                            <div className="projects-container">
-                                <h3>Simple Weather</h3>
-                                <p>A simple weather app. Check the weather in some of my favorite cities. Built with OpenWeather API.</p>
-                                <WeatherModule />
-                            </div>
-                        </div>
-                        <div className="flexbox-item">
-                            <div className="projects-container">
-                                <h3>Play Pong</h3>
-                                <img src="media/pong-img.png" alt="pong-screenshot" width="90%" />
-                                <p>A simple recreation of classic Pong. Desktop only — not mobile friendly. <a href="pong/pong.html" target="_blank">Play Pong</a></p>
-                            </div>
-                        </div>
                     </div>
 
                     <div id="cc-notice">
@@ -172,8 +147,128 @@ const Portfolio = (props) => {
                     </div>
                 </div>
             );
+// business ideas page
+        case 'business-ideas':
+            return <BusinessIdeasPage plans={plans} />;
+
         default: return(<div>No content loaded yet. Try refreshing the page.</div>);
     }
+}
+
+function BusinessIdeasPage({ plans }) {
+    const chartRef = useRef(null);
+    const chartInstance = useRef(null);
+    const [showLabels, setShowLabels] = useState(false);
+
+    useEffect(() => {
+        if (!chartRef.current || plans.length === 0) return;
+
+        if (chartInstance.current) chartInstance.current.destroy();
+
+        const labelPlugin = {
+            id: 'labelPlugin',
+            afterDatasetsDraw(chart) {
+                if (!showLabels) return;
+                const ctx = chart.ctx;
+                chart.data.datasets[0].data.forEach((point, i) => {
+                    const meta = chart.getDatasetMeta(0);
+                    const el = meta.data[i];
+                    ctx.fillStyle = '#4bd6d6';
+                    ctx.font = '11px IBM Plex Mono, monospace';
+                    ctx.fillText(plans[i].title, el.x + 8, el.y - 6);
+                });
+            }
+        };
+
+        chartInstance.current = new Chart(chartRef.current, {
+            type: 'scatter',
+            plugins: [labelPlugin],
+            data: {
+                datasets: [{
+                    data: plans.map(p => ({ x: p.feasibility, y: p.profitability })),
+                    pointRadius: 8,
+                    pointHoverRadius: 10,
+                    backgroundColor: 'rgba(75, 214, 214, 0.7)',
+                    borderColor: 'rgba(75, 214, 214, 1)',
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        min: 0, max: 10,
+                        title: { display: true, text: 'Feasibility', color: '#4bd6d6' },
+                        ticks: { color: '#4bd6d6' },
+                        grid: { color: 'rgba(75,214,214,0.15)' },
+                        border: { color: '#4bd6d6' },
+                    },
+                    y: {
+                        min: 0, max: 10,
+                        title: { display: true, text: 'Profitability', color: '#4bd6d6' },
+                        ticks: { color: '#4bd6d6' },
+                        grid: { color: 'rgba(75,214,214,0.15)' },
+                        border: { color: '#4bd6d6' },
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const p = plans[ctx.dataIndex];
+                                return `${p.title}  (F: ${p.feasibility}, P: ${p.profitability})`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        return () => chartInstance.current?.destroy();
+    }, [plans, showLabels]);
+
+    return (
+        <div id="portfolio-element">
+            <div className="flexbox-container">
+                <div className="flexbox-title">
+                    <h3 align="center">Proposals &amp; Business Ideas</h3>
+                    <p className="section-description">These are business concepts I've developed and believe in — but don't yet have collaborators. If you'd like to contribute to one of these projects, please contact me.</p>
+                </div>
+            </div>
+
+            <div className="flexbox-container">
+                {plans.map(plan => (
+                    <div className="flexbox-item" key={plan.id}>
+                        <div className="projects-container">
+                            <p className="plan-industry">{plan.industry}</p>
+                            <h3>{plan.title}</h3>
+                            <p>{plan.description}</p>
+                            <a href={`business-plans/${plan.file}`} target="_blank" rel="noreferrer" className="plan-link">View proposal →</a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div id="ideas-chart-container">
+                <h4>Feasibility vs. Profitability</h4>
+                <canvas ref={chartRef} />
+                <label id="chart-label-toggle">
+                    <input
+                        type="checkbox"
+                        checked={showLabels}
+                        onChange={e => setShowLabels(e.target.checked)}
+                    />
+                    {' '}show labels
+                </label>
+            </div>
+
+            <div id="cc-notice">
+                <p>
+                    Anti-copyright notice: steal this. Use it. Make money from it. I don't care — just tell people where it came from.{' '}
+                    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>
+                </p>
+            </div>
+        </div>
+    );
 }
 
 export default Portfolio;
