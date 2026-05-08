@@ -1,9 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
+import { Chart, ScatterController, LinearScale, PointElement, Tooltip } from 'chart.js';
 import './portfolio.css';
+
+Chart.register(ScatterController, LinearScale, PointElement, Tooltip);
 
 const Portfolio = (props) => {
 
     const [showDemoModal, setShowDemoModal] = useState(false);
+    const [plans, setPlans] = useState([]);
+
+    useEffect(() => {
+        fetch('/business-plans/plans.json')
+            .then(r => r.json())
+            .then(setPlans)
+            .catch(() => {});
+    }, []);
 
     switch(props.page) {
         
@@ -136,8 +147,128 @@ const Portfolio = (props) => {
                     </div>
                 </div>
             );
+// business ideas page
+        case 'business-ideas':
+            return <BusinessIdeasPage plans={plans} />;
+
         default: return(<div>No content loaded yet. Try refreshing the page.</div>);
     }
+}
+
+function BusinessIdeasPage({ plans }) {
+    const chartRef = useRef(null);
+    const chartInstance = useRef(null);
+    const [showLabels, setShowLabels] = useState(false);
+
+    useEffect(() => {
+        if (!chartRef.current || plans.length === 0) return;
+
+        if (chartInstance.current) chartInstance.current.destroy();
+
+        const labelPlugin = {
+            id: 'labelPlugin',
+            afterDatasetsDraw(chart) {
+                if (!showLabels) return;
+                const ctx = chart.ctx;
+                chart.data.datasets[0].data.forEach((point, i) => {
+                    const meta = chart.getDatasetMeta(0);
+                    const el = meta.data[i];
+                    ctx.fillStyle = '#4bd6d6';
+                    ctx.font = '11px IBM Plex Mono, monospace';
+                    ctx.fillText(plans[i].title, el.x + 8, el.y - 6);
+                });
+            }
+        };
+
+        chartInstance.current = new Chart(chartRef.current, {
+            type: 'scatter',
+            plugins: [labelPlugin],
+            data: {
+                datasets: [{
+                    data: plans.map(p => ({ x: p.feasibility, y: p.profitability })),
+                    pointRadius: 8,
+                    pointHoverRadius: 10,
+                    backgroundColor: 'rgba(75, 214, 214, 0.7)',
+                    borderColor: 'rgba(75, 214, 214, 1)',
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        min: 0, max: 10,
+                        title: { display: true, text: 'Feasibility', color: '#4bd6d6' },
+                        ticks: { color: '#4bd6d6' },
+                        grid: { color: 'rgba(75,214,214,0.15)' },
+                        border: { color: '#4bd6d6' },
+                    },
+                    y: {
+                        min: 0, max: 10,
+                        title: { display: true, text: 'Profitability', color: '#4bd6d6' },
+                        ticks: { color: '#4bd6d6' },
+                        grid: { color: 'rgba(75,214,214,0.15)' },
+                        border: { color: '#4bd6d6' },
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const p = plans[ctx.dataIndex];
+                                return `${p.title}  (F: ${p.feasibility}, P: ${p.profitability})`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        return () => chartInstance.current?.destroy();
+    }, [plans, showLabels]);
+
+    return (
+        <div id="portfolio-element">
+            <div className="flexbox-container">
+                <div className="flexbox-title">
+                    <h3 align="center">Proposals &amp; Business Ideas</h3>
+                    <p className="section-description">These are business concepts I've developed and believe in — but don't yet have collaborators. If you'd like to contribute to one of these projects, please contact me.</p>
+                </div>
+            </div>
+
+            <div className="flexbox-container">
+                {plans.map(plan => (
+                    <div className="flexbox-item" key={plan.id}>
+                        <div className="projects-container">
+                            <p className="plan-industry">{plan.industry}</p>
+                            <h3>{plan.title}</h3>
+                            <p>{plan.description}</p>
+                            <a href={`business-plans/${plan.file}`} target="_blank" rel="noreferrer" className="plan-link">View proposal →</a>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div id="ideas-chart-container">
+                <h4>Feasibility vs. Profitability</h4>
+                <canvas ref={chartRef} />
+                <label id="chart-label-toggle">
+                    <input
+                        type="checkbox"
+                        checked={showLabels}
+                        onChange={e => setShowLabels(e.target.checked)}
+                    />
+                    {' '}show labels
+                </label>
+            </div>
+
+            <div id="cc-notice">
+                <p>
+                    Anti-copyright notice: steal this. Use it. Make money from it. I don't care — just tell people where it came from.{' '}
+                    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>
+                </p>
+            </div>
+        </div>
+    );
 }
 
 export default Portfolio;

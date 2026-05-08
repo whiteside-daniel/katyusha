@@ -2,6 +2,22 @@
     margin: 1vw;
 }
 
+#ideas-chart-container {
+    max-width: 560px;
+    margin: 4vh auto 2vh;
+    padding: 2vh 2vw;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+#chart-label-toggle {
+    display: block;
+    margin-top: 1rem;
+    font-size: small;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 .home-container {
     margin-top: 3vh;
     margin-bottom: 1vh;
@@ -43,8 +59,7 @@
 }
 
 #homepage-container {
-    /*Display change to visible in terminal-window.js*/
-    display: none;
+    display: block;
 }
 
 #cc-notice {
@@ -176,6 +191,36 @@
 }
 
 #demo-modal-buttons a:hover {
+    font-weight: bold;
+}
+
+.section-description {
+    text-align: center;
+    opacity: 0.7;
+    font-size: small;
+    margin-top: 0.5rem;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+}
+
+.plan-industry {
+    font-size: smaller;
+    opacity: 0.6;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.plan-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: small;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
+
+.plan-link:hover {
     font-weight: bold;
 }
 

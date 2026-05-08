@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UME Core Data Model for Phase 2</title>
+  <link rel="stylesheet" href="zoho-diagram.css">
+  <script src="https://unpkg.com/cytoscape@3.33.1/dist/cytoscape.min.js"></script>
+</head>
+<body>
+
+<div id="login">
+  <div id="login-box">
+    <div id="login-logo">Zoho Integration Map</div>
+    <p id="login-hint">Internal use only</p>
+    <form id="login-form">
+      <input id="login-input" type="password" placeholder="Password" autocomplete="current-password">
+      <button type="submit">Enter</button>
+    </form>
+    <p id="login-error"></p>
+  </div>
+</div>
+
+<div id="app" style="display:none;">
+  <header>
+    <h1>Zoho Integration Map</h1>
+    <p>Click a module to see user stories, connections, and implementation details.</p>
+  </header>
+
+  <div id="map-wrap">
+    <div id="cy"></div>
+  </div>
+
+  <div id="edge-legend">
+    <div class="edge-legend-item">
+      <div class="edge-line flow"></div>
+      <span>Data flow</span>
+    </div>
+    <div class="edge-legend-item">
+      <div class="edge-line sync"></div>
+      <span>Sync / reference</span>
+    </div>
+  </div>
+
+  <div id="detail-panel">
+    <div class="panel-header">
+      <div class="panel-header-top">
+        <span class="panel-module-name"></span>
+        <span class="panel-system-badge"></span>
+      </div>
+      <p class="panel-desc"></p>
+    </div>
+    <div class="panel-body">
+      <div class="panel-cell">
+        <div class="cell-title">User Stories</div>
+        <ul class="stories-list"></ul>
+      </div>
+      <div class="panel-cell">
+        <div class="cell-title">Connections</div>
+        <div class="connections-list"></div>
+      </div>
+      <div class="panel-cell">
+        <div class="cell-title">Implementation</div>
+        <p class="impl-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="edge-tooltip"></div>
+<script src="zoho-diagram.js"></script>
+</body>
+</html>

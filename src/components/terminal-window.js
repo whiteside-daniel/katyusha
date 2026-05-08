@@ -1,14 +1,7 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
 
-function revealSite() {
-    document.getElementById('homepage-container').style.display = 'block';
-    document.getElementById('content-module').style.display = 'block';
-    document.getElementById('site-credit').style.display = 'block';
-    document.getElementById('terminal-window').style.display = 'none';
-}
-
-export const TerminalWindow = () => {
+export const TerminalWindow = ({ onComplete }) => {
     return(
         <div id="terminal-window">
                 <code id="typewriter">
@@ -28,7 +21,7 @@ export const TerminalWindow = () => {
                           .pauseFor(100)
                           .typeString('<br>site built with ReactJS, HTML5, CSS')
                           .pauseFor(1500)
-                          .callFunction(revealSite)
+                          .callFunction(onComplete)
                           .start();
                       }}
                       options={{
@@ -38,8 +31,10 @@ export const TerminalWindow = () => {
                       }}
                     />
                 </code>
-                <button onClick={revealSite} style={{
-                    marginTop: '1.5rem',
+                <button onClick={onComplete} style={{
+                    position: 'fixed',
+                    bottom: '1.5rem',
+                    right: '1.5rem',
                     background: 'none',
                     border: '1px solid currentColor',
                     color: 'inherit',

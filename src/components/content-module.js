@@ -14,7 +14,7 @@ const ContentModule = (props) => {
                     </div>
                     <div className="headshot-caption">
                         <span>&#60;Daniel Whiteside&#62;<br />
-                        &#60;Web Developer&#62;</span>
+                        &#60;Builder&#62;</span>
                     </div>
                 </div>
             </div>
