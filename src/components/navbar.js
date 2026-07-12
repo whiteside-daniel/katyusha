@@ -25,9 +25,7 @@ function NavBar(props) {
                     <div className="nav-item" onClick={() => {handleClick('home')}}>Home</div>
 <div className="nav-item" onClick={() => {handleClick('projects')}}>Projects</div>
                     <div className="nav-item" onClick={() => {handleClick('business-ideas')}}>Business Ideas</div>
-                    <div className="nav-item"><a href="https://creatrcollective.substack.com" target="_blank" rel="noreferrer">Substack</a></div>
                     <div className="nav-item"><a href="https://wharfinger.app" target="_blank" rel="noreferrer">Wharfinger Asset Keeper</a></div>
-                    <div className="nav-item"><a href="https://creatrcollective.net" target="_blank" rel="noreferrer">CreatrCollective - Tech Consulting</a></div>
                 </div>
             </div>
         </div>
