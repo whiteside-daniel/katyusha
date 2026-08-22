@@ -35,6 +35,9 @@ const Portfolio = (props) => {
                             <p>
                                 I work with businesses and entrepreneurs on software, systems, and the human side of getting things built.
                             </p>
+                            <p>
+                                See what I've been thinking on <a href="https://creatrcollective.substack.com" target="_blank" rel="noreferrer">Substack</a>, and see my professional services at <a href="https://creatrcollective.net" target="_blank" rel="noreferrer">CreatrCollective</a>.
+                            </p>
                         </div>
                     </div>
 
@@ -43,8 +46,6 @@ const Portfolio = (props) => {
                         <p>daniel@creatrcollective.net</p>
                         <p>
                             <a href="media/daniel-whiteside-resume.pdf" target="_blank">Resume</a>
-                            &nbsp;·&nbsp;
-                            <a href="https://creatrcollective.substack.com" target="_blank" rel="noreferrer">Substack</a>
                         </p>
                     </div>
                     <div id="cc-notice">
@@ -121,20 +122,6 @@ const Portfolio = (props) => {
                                 <h3>Retirement Calculator</h3>
                                 <img id="retirement-img" src="media/retirement-calc.png" alt="retirement" width="90%" />
                                 <p>An interactive retirement savings calculator. Enter your current savings, contributions, and expected returns to project growth and see how long your nest egg will last. Built with Chart.js and MathJax. <a href="retirement-calculator/index.html" target="_blank">Open Calculator</a></p>
-                            </div>
-                        </div>
-                        <div className="flexbox-item">
-                            <div className="projects-container" id="e8-animation">
-                                <h3>E8 Group Animation</h3>
-                                <img id="e8-animation-img" src="media/e8-preview.png" alt="e8-group" width="90%" />
-                                <p>An animation of the root lattice of exceptional group "E8," stereographically projected down to two dimensions, made in Python. The symmetries of E8 have implications to particle physics and pure mathematics. <a href="media/e8-animation.MP4" target="_blank">Link (mp4)</a></p>
-                            </div>
-                        </div>
-                        <div className="flexbox-item">
-                            <div className="projects-container" id="limacon-python">
-                                <h3>Limaçon</h3>
-                                <img id="limacon-img" src="media/limacon-preview.png" alt="limacon" width="90%" />
-                                <p>A limaçon created from the envelope of the reflected rays emanating from a single point. Inspired by noticing a limaçon is generated when light reflects off a circular curved surface (like a coffee cup).<br /><a href="media/limacon.png" target="_blank">Full Image (png)</a> or <a href="media/limacon.py" target="_blank">Python file</a></p>
                             </div>
                         </div>
                     </div>
